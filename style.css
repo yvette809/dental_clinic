@@ -1,0 +1,47 @@
+:root {
+  --primary-color: #2baaec;
+  --secondary-color: #25e6c8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.top-nav {
+  padding: 1rem 1rem;
+}
+.top-nav .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border-bottom: 1px solid grey; */
+}
+
+.fa-clock,
+.fa-facebook-f,
+.fa-google-plus-g,
+.fa-google {
+  margin-right: 0.3rem;
+  color: var(--primary-color);
+}
+
+.fa-twitter{
+    color: var(--secondary-color);
+}
+
+
+.social-icons a {
+  margin-right: 0.6rem;
+}
