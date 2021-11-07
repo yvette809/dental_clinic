@@ -14,34 +14,107 @@ body {
   line-height: 1.5;
 }
 
+h1 {
+  color: #363636;
+}
+
 .container {
-  width: 100%;
+  max-width: 1200px;
   margin: auto;
 }
 
 .top-nav {
   padding: 1rem 1rem;
 }
-.top-nav .container {
+.top-nav .container,
+.navbar .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 1.5rem auto;
   /* border-bottom: 1px solid grey; */
 }
 
-.fa-clock,
-.fa-facebook-f,
-.fa-google-plus-g,
-.fa-google {
-  margin-right: 0.3rem;
-  color: var(--primary-color);
+.top-nav .container p {
+  display: flex;
+  align-items: center;
 }
 
-.fa-twitter{
-    color: var(--secondary-color);
+.top-nav .container p img {
+  margin-right: 0.5rem;
 }
 
+.collapse ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
 
-.social-icons a {
-  margin-right: 0.6rem;
+.collapse ul li a {
+  margin-right: 0.7rem;
+}
+
+#showcase {
+  background: #00000091 url("./images/caroline-lm--m-4tYmtLlI-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  min-height: 50vh;
+}
+
+#showcase .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#showcase .container img {
+  height: 500px;
+  margin: 3rem auto;
+  border-radius: 10px;
+}
+
+.content {
+  align-self: center;
+  text-align: justify;
+  padding: 5rem 10rem;
+}
+
+.text h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.text p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 0.75rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-success {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin-top: 1.2rem;
+}
+
+#info.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  background-color: red;
+  height: 400px;
+}
+
+#info img {
+  width: 50%;
+  height: auto;
 }
