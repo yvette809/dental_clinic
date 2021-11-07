@@ -110,11 +110,39 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin: 2rem auto;
-  background-color: red;
-  height: 400px;
+  height: 100%;
 }
 
 #info img {
   width: 50%;
   height: auto;
+}
+
+#info .info-content {
+  padding: 1.2rem;
+}
+
+.info-content p {
+  font-size: 0.9rem;
+  padding-top: 1.5rem;
+}
+
+.info-count {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.info-count div p {
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.title {
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 0.6rem;
+}
+.title span {
+  color: var(--primary-color);
 }
