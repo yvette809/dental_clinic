@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@100&display=swap");
+
 :root {
   --primary-color: #2baaec;
   --secondary-color: #25e6c8;
@@ -12,15 +15,22 @@ html,
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  background-color: #fff;
 }
 
 h1 {
   color: #363636;
+  font-family: "Roboto Slab", serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
 }
 
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .top-nav {
@@ -31,8 +41,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem auto;
+  margin: 0.1rem auto;
+
   /* border-bottom: 1px solid grey; */
+}
+
+.navbar .container {
+  padding: 0.9rem;
 }
 
 .top-nav .container p {
@@ -44,39 +59,69 @@ h1 {
   margin-right: 0.5rem;
 }
 
-.collapse ul {
+.social-media-icons a img {
+  margin-right: 1rem;
+}
+
+.social-media-icons a img:hover {
+  background-color: var(--secondary-color);
+  opacity: 0.5;
+}
+
+.social-media-icons a:nth-child(2):hover {
+  /* color: var(--primary-color); */
+  opacity: 0.7;
+  background-color: var(--primary-color);
+}
+
+ul {
   display: flex;
   align-items: center;
   list-style-type: none;
+  font-family: "Roboto Slab", serif;
+  font-weight: 800;
+  cursor: pointer;
 }
 
-.collapse ul li a {
-  margin-right: 0.7rem;
+ul li a {
+  padding: 0.4rem 0.9rem;
+}
+
+ul li:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.navbar-toggler {
+  display: none;
 }
 
 #showcase {
-  background: #00000091 url("./images/caroline-lm--m-4tYmtLlI-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: overlay;
-  min-height: 50vh;
+  background-color: #dedede;
+  height: 70vh;
+  padding-top: 2rem;
 }
 
-#showcase .container {
+#showcase {
   display: flex;
   justify-content: space-between;
 }
 
-#showcase .container img {
-  height: 500px;
-  margin: 3rem auto;
-  border-radius: 10px;
+#showcase div,
+#about-us div {
+  flex: 1;
+}
+
+#showcase .showcase-img {
+  background: url("./images/placehold2.png") no-repeat center center/contain;
+  margin-left: 8rem;
 }
 
 .content {
   align-self: center;
   text-align: justify;
-  padding: 5rem 10rem;
+  padding: 3rem;
 }
 
 .text h1 {
@@ -86,11 +131,13 @@ h1 {
 
 .text p {
   margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
+  font-size: 0.8rem;
 }
 
 .btn {
-  padding: 0.75rem 3rem;
+  padding: 0.75rem 2rem;
   border: 1px solid transparent;
   border-radius: 0.8rem;
   outline: none;
@@ -112,25 +159,36 @@ h1 {
   font-weight: 900;
 }
 
-#info.container {
+.btn-success:hover {
+  background-color: var(--primary-color);
+  transition: background-color 0.1s ease-in;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid #fff;
+  transition: all 0.1s ease-in;
+}
+
+#about-us.container {
   display: flex;
   justify-content: space-between;
-  margin: 2rem auto;
-  height: 100%;
+  margin-top: 2rem;
 }
 
-#info img {
-  width: 50%;
-  height: auto;
+.about-us-img {
+  background: url("./images/placehold.png") no-repeat center center/contain;
+  height: 70vh;
 }
-
-#info .info-content {
+#about-us .info-content {
   padding: 1.2rem;
 }
 
 .info-content p {
   font-size: 0.9rem;
   padding-top: 1.5rem;
+  color: grey;
 }
 
 .info-count {
@@ -141,9 +199,9 @@ h1 {
 }
 
 .info-count div p {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 900;
 }
 .title {
   border-bottom: 3px solid var(--secondary-color);
@@ -183,26 +241,37 @@ h1.services-heading {
 }
 
 .services a img {
-  padding: 1.6rem;
+  padding: 1rem;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+img:nth-child(2) {
+  background-color: var(--primary-color);
+}
+
+.services a img:hover {
+  /* transform: scaleX(1.1); */
+  opacity: 0.5;
 }
 .services h2 {
-  /* margin-bottom: 1rem; */
+  font-family: "Roboto Slab", serif;
 }
 .services p {
   padding: 0.5rem 0.2rem;
 }
 
-.footer-main {
+#contact {
   background-color: var(--primary-color);
 }
 
-.footer-main .container {
+#contact .container {
   display: flex;
   justify-content: space-between;
-  padding: 5rem;
+  padding: 5rem 0rem;
 }
 
-.footer-main .container h1 {
+#contact .container h1 {
   color: #fff;
 }
 
@@ -213,4 +282,134 @@ h1.services-heading {
   background-color: #1665af;
   padding: 1rem;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  /* nav */
+  .top-nav .container {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+  .navbar .container {
+    padding: 2rem;
+  }
+
+  .navbar-toggler {
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 1px;
+    border: 0;
+    background-color: rgb(97, 63, 63);
+  }
+
+  .navbar-toggler .line {
+    background-color: yellow;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+  }
+
+  .navbar-toggler .line2 {
+    top: auto;
+    bottom: 10px;
+  }
+
+  button.active .line .line1 {
+    transform: rotateY(-765deg) translateY(5.5px);
+    background-color: red;
+  }
+
+  button.active .line .line2 {
+    transform: rotateY(360deg) translateY(-5.5px);
+    background-color: white;
+  }
+
+  .navbar-brand img {
+    height: auto;
+    width: 60%;
+  }
+
+  ul {
+    display: none;
+  }
+
+  ul.active {
+    display: block;
+    height: 100%;
+    width: 80%;
+    background: grey;
+  }
+
+  ul::before {
+    display: block;
+    content: " working Hours:Monday To Friday: 9.00-18.00";
+    margin-bottom: 1rem;
+  }
+
+  /* end of nav */
+
+  #showcase {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #showcase .showcase-img {
+    display: none;
+  }
+
+  .content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 5rem;
+  }
+
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+
+  .info-content .title {
+    font-size: 1.5rem;
+  }
+
+  .info-count {
+    display: block;
+    text-align: center;
+  }
+
+  .info-count div {
+    position: relative;
+    width: 100%;
+  }
+
+  #services {
+    display: block;
+  }
+
+  #services .services {
+    border: none;
+    width: 60vw;
+   
+  }
+
+  #contact .container {
+    display: block;
+    text-align: center;
+  }
+
+  #contact .container h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
 }

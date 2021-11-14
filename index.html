@@ -9,9 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     />
+
     <title>Document</title>
   </head>
-  <body>
+  <body id="home">
     <!-- navbar start -->
     <nav class="top-nav">
       <div class="container">
@@ -19,8 +20,13 @@
           <img src="./images/clock icon.png" /> Working hours: Monday- Friday:
           9.00 - 18.00
         </p>
-        <div>
-          <a href="#"><img src="./images/social media icons.png" alt="" /></a>
+        <div class="social-media-icons">
+          <a href="#"><img src="./images/facebook icon.png" alt="" /></a>
+          <a href="#"><img src="./images/twitter icon.png" alt="" /></a>
+          <a href="#"><img src="./images/google plus icon.png" alt="" /></a>
+          <a href="#"><img src="./images/instagram icon.png" alt="" /></a>
+
+          <!-- <a href="#"><img src="./images/social media icons.png" alt="" /></a> -->
         </div>
       </div>
     </nav>
@@ -33,39 +39,40 @@
           /></a>
         </div>
 
-        <div class="collapse">
-          <ul class="navbar-nav">
-            <li class="nav-link"><a href="#"></a>Home</li>
-            <li class="nav-link"><a href="#"></a>About Us</li>
-            <li class="nav-link"><a href="#"></a>Services</li>
-            <li class="nav-link"><a href="#"></a>Contact</li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="#home" class="current"></a>Home</li>
+          <li><a href="#about-us"></a>About Us</li>
+          <li><a href="#services"></a>Services</li>
+          <li><a href="#contact"></a>Contact</li>
+        </ul>
+        <button class="navbar-toggler" id="toggle">
+          <!-- <i class="fas fa-bars fa-3x"></i> -->
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </button>
       </div>
     </nav>
     <!-- navbar end -->
 
     <!-- showcase start -->
     <section id="showcase">
-      <div class="container">
-        <img src="./images/jonathan-borba-Yui-VjmS8AA-unsplash.jpg" alt="" />
-        <div class="content">
-          <div class="text">
-            <h1>Modern technologies <br />ensure safety</h1>
-            <p>
-              Our clinic is equipped with the highest quality medical and dental
-              equipment, which allows for quick and effective treatment of the
-              patient
-            </p>
-            <button class="btn btn-success">About our clinic</button>
-          </div>
+      <div class="showcase-img"></div>
+      <div class="content">
+        <div class="text">
+          <h1>Modern technologies <br />ensure safety</h1>
+          <p>
+            Our clinic is equipped with the highest quality medical and dental
+            equipment,<br />
+            which allows for quick and effective treatment of the patient
+          </p>
+          <button class="btn btn-success">About our clinic</button>
         </div>
       </div>
     </section>
     <!-- showcase end -->
     <!-- info section start -->
 
-    <div class="container" id="info">
+    <div class="container" id="about-us">
       <div class="info-content">
         <h1 class="title">
           Dential<span>Clinic</span> is a modern <br />
@@ -103,7 +110,8 @@
         </div>
       </div>
 
-      <img src="./images/caroline-lm-QA9fRIi6sFw-unsplash (1).jpg" alt="" />
+     
+      <div class="about-us-img"></div>
     </div>
     <!-- info section end -->
     <!-- services section start -->
@@ -111,7 +119,7 @@
       <h1 class="services-heading">Our Services</h1>
       <div id="services" class="container">
         <div class="services">
-          <a href="#"><img src="./images/icon background.png" alt="" /></a>
+          <a href="#"><img src="./images/tooth icon.png" alt="" /></a>
           <h2>Tooth Inspection</h2>
           <p>
             Comprehensive review of the mouth and detection of broken teeth and
@@ -119,7 +127,9 @@
           </p>
         </div>
         <div class="services">
-          <a href="#"><img src="./images/icon background.png" alt="" /></a>
+          <a href="#" style="color: red; height: 20px; opacity: 0.5"
+            ><img src="./images/Group 4.png" alt=""
+          /></a>
           <h2>Tooth removal</h2>
           <p>
             Any broken tooth is a threat to the boy, so this danger should be
@@ -127,7 +137,7 @@
           </p>
         </div>
         <div class="services">
-          <a href="#"><img src="./images/icon background.png" alt="" /></a>
+          <a href="#"><img src="./images/Group 16.png" alt="" /></a>
           <h2>Removal of tartar</h2>
           <p>
             Tartar is the enemy of every human being because through his
@@ -135,7 +145,7 @@
           </p>
         </div>
         <div class="services">
-          <a href="#"><img src="./images/icon background.png" alt="" /></a>
+          <a href="#"><img src="./images/Group 29.png" alt="" /></a>
           <h2>Polishinng and cleaning</h2>
           <p>
             A simple and safe Polishing treatment <br />improves the healtth of
@@ -143,7 +153,7 @@
           </p>
         </div>
         <div class="services">
-          <a href="#"><img src="./images/icon background.png" alt="" /></a>
+          <a href="#"><img src="./images/Group 34.png" alt="" /></a>
           <h2>Dental implants</h2>
           <p>
             The best solution when you can not save a healthy tooth and you need
@@ -151,7 +161,7 @@
           </p>
         </div>
         <div class="services">
-          <a href="#"><img src="./images/icon background.png" alt="" /></a>
+          <a href="#"><img src="./images/Group 57.png" alt="" /></a>
           <h2>Effective protection</h2>
           <p>
             The cheapest tooth protection is their cleaning ad a regular visit
@@ -161,7 +171,7 @@
       </div>
     </div>
     <!-- footer -->
-    <footer class="footer-main">
+    <footer class="footer-main" id="contact">
       <div class="container">
         <h1>Do not Wait and make an appointment today!</h1>
         <button class="btn btn-primary">Book an appointment</button>
@@ -170,5 +180,7 @@
         <p>@2020 DentialClinic</p>
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
