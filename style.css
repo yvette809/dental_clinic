@@ -11,11 +11,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
+
+a {
+  font-family: "Roboto Slab", serif;
 }
 
 h1 {
@@ -23,9 +21,16 @@ h1 {
   font-family: "Roboto Slab", serif;
 }
 
+h3 {
+  font-weight: normal;
+  color: #363636;
+}
+
 p {
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
+  font-size: 0.9rem;
+  color: #626262;
+  font-weight: 300;
 }
 
 .container {
@@ -227,18 +232,18 @@ ul li a.current:hover {
 #services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: -50%;
 }
 
 .services {
-  border: 1px solid #fff;
-  border-radius: 0.6rem;
+  border-radius: 10px;
   text-align: center;
-  padding: 2rem 0.1rem;
-  padding: 1.5rem 0 1.5rem 0;
+  padding: 4rem 0 2.5rem 0;
   background-color: #fff;
-  max-width: 23rem;
-  margin: 1rem 1.2rem 0 0;
+  width: 22rem;
+  margin: 1.5rem -3rem 0 0;
   position: relative;
+  transition: box-shadow 100ms ease-in-out;
 }
 
 h1.services-heading {
@@ -248,14 +253,6 @@ h1.services-heading {
   padding-bottom: 1rem;
 }
 
-.services div {
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  transition: all 200ms ease-in-out;
-}
 
 .services div img {
   width: 85px;
@@ -265,7 +262,7 @@ h1.services-heading {
   padding: 1rem;
   margin-bottom: 1.2rem;
   object-fit: contain;
-  transition: transform 100ms ease-out;
+  transition: outline 200ms ease-in-out, background 200ms ease-out;
 }
 
 div img.second-img {
@@ -273,14 +270,13 @@ div img.second-img {
 }
 
 .services:hover {
-  box-shadow: 2px 2px 1rem #3333339d, 0 0 3rem #333333a8;
+  box-shadow: 2px 2px 1rem #3333335d, 0 0 3rem #33333378;
 }
 
 .services:hover div img,
 .services:focus div img {
-  /* background-color: hotpink; */
-  box-shadow: 2px 2px 1rem var(--secondary-color);
-  transform: scale(1.2);
+  background: var(--primary-color);
+  outline: 6px solid #2ba8ec62;
 }
 
 .services h3 {
@@ -322,78 +318,58 @@ div img.second-img {
 @media (max-width: 576px) {
   /* nav */
   .top-nav .container {
+    /* display: none; */
+    display: block;
+  }
+
+  .top-nav .container p {
     display: none;
   }
 
-  hr {
-    display: none;
+  .top-nav .container .social-media-icons {
+    display: flex;
+    justify-content: space-around;
   }
+
   .navbar .container {
     padding: 2rem;
+    position: relative;
   }
 
   .navbar-toggler {
     display: block;
-    position: relative;
-    height: 30px;
-    width: 30px;
-    border-radius: 1px;
-    border: 0;
-    background-color: rgb(97, 63, 63);
-  }
-
-  .navbar-toggler .line {
-    background-color: yellow;
-    height: 2px;
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    transition: transform 0.6s linear;
-  }
-
-  .navbar-toggler .line2 {
-    top: auto;
-    bottom: 10px;
-  }
-
-  button.active .line .line1 {
-    transform: rotateY(-765deg) translateY(5.5px);
-    background-color: red;
-  }
-
-  button.active .line .line2 {
-    transform: rotateY(360deg) translateY(-5.5px);
-    background-color: white;
+    border-radius: 5px;
+   
+  
   }
 
   .navbar-brand img {
     height: auto;
     width: 60%;
   }
-
   ul {
     display: none;
   }
 
   ul.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    right: 0;
     height: 50vh;
-    width: 80%;
-    background: grey;
+    background-color: #fff;
   }
-
-  ul::before {
-    display: block;
-    content: " working Hours:Monday To Friday: 9.00-18.00";
-    margin-bottom: 1rem;
+  ul li {
+    padding: 2rem 0 3rem 0;
   }
-
-  /* end of nav */
 
   #showcase {
-    display: block;
-    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    height: 400px;
   }
 
   #showcase .showcase-img {
@@ -401,9 +377,7 @@ div img.second-img {
   }
 
   .content {
-    text-align: center;
-    margin: 0 auto;
-    padding: 5rem;
+    margin-top: -2rem;
   }
 
   .btn-success {
@@ -432,7 +406,7 @@ div img.second-img {
   }
 
   .about-us-img {
-    transform: translateY(40%);
+    transform: translateY(20%);
   }
 
   #services {
@@ -459,7 +433,7 @@ div img.second-img {
 }
 
 /* tablets */
-@media (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .container {
     min-width: 80%;
   }
@@ -478,7 +452,7 @@ div img.second-img {
     margin-bottom: 5rem;
   }
 
-  .info-count{
+  .info-count {
     display: block;
     text-align: center;
   }
@@ -487,7 +461,22 @@ div img.second-img {
     transform: translateX(80%);
   }
 
-  .info-count div small{
+  .info-count div small {
     font-size: 1.2rem;
+  }
+
+  ul li a {
+    padding: 0.5rem;
+  }
+}
+
+/* bigger tablets */
+@media (max-width: 992px) {
+  .container {
+    min-width: 80%;
+  }
+
+  .btn.btn-primary {
+    padding: 0rem 0.5rem;
   }
 }
